@@ -1,8 +1,10 @@
 # fullstack-task
 
-Set db name in .env by changing DB_NAME env
+Set db name in .env by changing DB_NAME env then restore database
 
 ## Restore Database from bson
+
+require mongodb
 
 ```
 npm run restore
