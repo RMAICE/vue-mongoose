@@ -1,0 +1,65 @@
+{
+  "name": "fullstack-task",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "restore": "node ./server/restore.js",
+    "nodemon": "nodemon --inspect ./server/server.js --watch ./server/**/*.*",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "core-js": "^2.6.5",
+    "dotenv": "^8.0.0",
+    "mongoose-paginate-v2": "^1.3.0",
+    "vee-validate": "^2.2.11",
+    "vue": "^2.6.10",
+    "vue-moment": "^4.0.0",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.14",
+    "nodemon": "^1.18.3",
+    "uniqid": "^5.0.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
