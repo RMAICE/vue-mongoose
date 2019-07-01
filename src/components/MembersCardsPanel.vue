@@ -41,6 +41,15 @@
         </div>
       </div>
     </form>
+    <div class="col-1">
+      <label for="perPage">Limit</label>
+      <select v-model="perPage" id="perPage" class="custom-select">
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
     <div class="col-2 ml-auto mr-0">
       <p class="text mb-2 text-right">Options</p>
       <button
@@ -75,6 +84,15 @@ export default {
         this.changeSearchWord(value);
       }
     },
+    perPage: {
+      get() {
+        return this.$store.state.membersPerPage;
+      },
+      set(value) {
+        this.setMembersPerPage(value);
+        this.loadMembers(this.$route.query);
+      }
+    },
     companyName() {
       let foundedCompany;
       let { company } = this.$route.query;
@@ -99,7 +117,12 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["changeSearchWord", "setFormState"]),
+    ...mapActions({
+      changeSearchWord: "changeSearchWord",
+      setFormState: "setFormState",
+      setMembersPerPage: "setMembersPerPage",
+      loadMembers: "fetchMembers"
+    }),
     toggleFilter() {
       this.filterExpanded = !this.filterExpanded;
     },

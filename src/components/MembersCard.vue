@@ -18,11 +18,11 @@
           <span>{{ firstName | capitalize }}</span>
         </span>
         <span v-else class="form-inline">
-          <label for="inputFirstName" class="col-form-label-sm mr-2">First name:&#x20;</label>
+          <label for="inputFirstName" class="col-form-label mr-2">First name:&#x20;</label>
           <input
             v-model="newFirstName"
             type="text"
-            class="form-control-sm"
+            class="form-control"
             id="inputFirstName"
             placeholder="First name"
           />
@@ -36,11 +36,11 @@
           <span>{{ lastName | capitalize }}</span>
         </span>
         <span v-else class="form-inline">
-          <label for="inputLastName" class="col-form-label-sm mr-2">Last name:&#x20;</label>
+          <label for="inputLastName" class="col-form-label mr-2">Last name:&#x20;</label>
           <input
             v-model="newLastName"
             type="text"
-            class="form-control-sm"
+            class="form-control"
             id="inputLastName"
             placeholder="Last name"
           />
@@ -54,7 +54,7 @@
           <span>{{ companyName | capitalize }}</span>
         </span>
         <span v-else class="form-inline">
-          <label for="selectCompany" class="col-form-label-sm mr-2">Company:&#x20;</label>
+          <label for="selectCompany" class="col-form-label mr-2">Company:&#x20;</label>
           <select v-model="newCompany" class="form-control" id="selectCompany">
             <option
               v-for="(company, i) in companies"

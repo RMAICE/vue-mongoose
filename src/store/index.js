@@ -12,9 +12,12 @@ const store = new Vuex.Store({
     members: {},
     companies: [],
     membersLoadingStatus: "notLoading",
-    membersPerPage: 2
+    membersPerPage: window.localStorage.getItem("vue-perPage") || 2
   },
   mutations: {
+    SET_MEMBERS_PER_PAGE(state, payload) {
+      state.membersPerPage = payload;
+    },
     SET_FORM_STATE(state, payload) {
       state.formState = payload;
     },
@@ -32,6 +35,10 @@ const store = new Vuex.Store({
     }
   },
   actions: {
+    setMembersPerPage({ commit }, payload) {
+      commit("SET_MEMBERS_PER_PAGE", payload);
+      window.localStorage.setItem("vue-perPage", `${payload}`);
+    },
     setFormState({ commit }, payload) {
       commit("SET_FORM_STATE", payload);
     },
@@ -69,6 +76,9 @@ const store = new Vuex.Store({
     },
     getMembers(state) {
       return state.members;
+    },
+    getMembersPerPage(state) {
+      return state.membersPerPage;
     },
     getNotPaginatedCompanies(state) {
       return state.companies;

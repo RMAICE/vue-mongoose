@@ -60,7 +60,6 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import api from "../api";
-import { delay } from "../helper";
 
 export default {
   data() {

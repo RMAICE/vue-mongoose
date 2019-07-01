@@ -1,6 +1,5 @@
 import axios from "axios";
 import { options } from "./index";
-import { delay } from "../helper";
 
 export default async function fetchMembers(query) {
   try {
