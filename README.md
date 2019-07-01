@@ -1,6 +1,6 @@
 # Note
 ```
-Задйте уникальное имя базы (что бы предотвратить конфликты) в файле .env
+Задайте уникальное имя базы (что бы предотвратить конфликты) в файле .env
 ```
 
 ## Restore Database from bson
@@ -9,6 +9,11 @@ require mongodb
 
 ```
 npm run restore
+```
+## Run backend
+
+```
+npm run nodemon
 ```
 
 ## Project setup
