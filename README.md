@@ -1,6 +1,7 @@
-# fullstack-task
-
-Set db name in .env by changing DB_NAME env then restore database
+# Note
+```
+Задйте уникальное имя базы (что бы предотвратить конфликты) в файле .env
+```
 
 ## Restore Database from bson
 
