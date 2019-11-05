@@ -34,7 +34,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "express": "^4.16.3",
     "mongodb": "^3.1.8",
-    "mongoose": "^5.3.14",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.18.3",
     "uniqid": "^5.0.3",
     "vue-template-compiler": "^2.6.10"
